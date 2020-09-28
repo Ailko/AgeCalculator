@@ -30,11 +30,22 @@ namespace AgeCalculator
 
         static DateTime EnterBirthDate()
         {
-            int year = askX("year");
-            int month = askX("month");
-            int day = askX("day");
+            while (true)
+            {
+                Console.Clear();
+                int year = askX("year");
+                int month = askX("month");
+                int day = askX("day");
 
-            return new DateTime(year, month, day);
+                if (new DateTime(year, month, day) < DateTime.Now)
+                {
+                    return new DateTime(year, month, day);
+                }
+                else
+                {
+                    Console.WriteLine("\nPlease enter a valid date");
+                }
+            }
         }
 
         static int askX(string toAsk)
