@@ -6,7 +6,13 @@ namespace AgeCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ShowWelcomeMessage();
+        }
+
+        static void ShowWelcomeMessage()
+        {
+            Console.WriteLine("Welkom!! \nDeze applicatie berekent hoe oud je bent. " +
+                "\nHiervoor zullen we uw leeftijd vragen (die enkel voor deze functie gebruikt wordt)");
         }
     }
 }
