@@ -7,6 +7,7 @@ namespace AgeCalculator
         static void Main(string[] args)
         {
             ShowWelcomeMessage();
+            PrintAge(AgeCalculator(EnterBirthDate()));
         }
 
 
