@@ -44,5 +44,13 @@ namespace AgeCalculator
             }
             return 0;
         }
+
+        static void PrintAge(TimeSpan age)
+        {
+            int years = (int)Math.Floor(age.Days / 365.2425);
+            int months = (int)Math.Floor(age.Days / 365.2425 * 12) - (int)Math.Floor(age.Days / 365.2425) * 12;
+            int days = age.Days - (int)((Math.Floor(age.Days / 365.2425 * 12) - Math.Floor(age.Days / 365.2425) * 12) / 12 * 365.2425) - (int)(Math.Floor(age.Days / 365.2425) * 365.2425);
+            Console.WriteLine($"You are {years} years, {months} months and {days} days old.");
+        }
     }
 }
