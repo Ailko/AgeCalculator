@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-﻿using System;
-
-namespace AgeCalculator
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            ShowWelcomeMessage();
-
-            
-            
-        }
-
-=======
 ﻿using System;
 
 namespace AgeCalculator
@@ -25,12 +9,11 @@ namespace AgeCalculator
             ShowWelcomeMessage();
         }
 
->>>>>>> master
+
         static void ShowWelcomeMessage()
         {
             Console.WriteLine("Welkom!! \nDeze applicatie berekent hoe oud je bent. " +
                 "\nHiervoor zullen we uw leeftijd vragen (die enkel voor deze functie gebruikt wordt)");
-<<<<<<< HEAD
         }
 
         static TimeSpan AgeCalculator(DateTime birthDay)
@@ -40,10 +23,7 @@ namespace AgeCalculator
 
             return age;
         }
-    }
-}
-=======
-        }
+
 
         static DateTime EnterBirthDate()
         {
@@ -56,8 +36,7 @@ namespace AgeCalculator
 
         static int askX(string toAsk)
         {
-            bool entered = false;
-            while (!entered)
+            while (true)
             {
                 Console.Clear();
                 Console.Write($"Please enter your birth {toAsk}: ");
@@ -72,7 +51,6 @@ namespace AgeCalculator
                     Console.ReadLine();
                 }
             }
-            return 0;
         }
 
         static void PrintAge(TimeSpan age)
@@ -84,4 +62,4 @@ namespace AgeCalculator
         }
     }
 }
->>>>>>> master
+
