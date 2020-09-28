@@ -15,6 +15,8 @@ namespace AgeCalculator
         {
             Console.WriteLine("Welkom!! \nDeze applicatie berekent hoe oud je bent. " +
                 "\nHiervoor zullen we uw leeftijd vragen (die enkel voor deze functie gebruikt wordt)");
+            Console.WriteLine("\n press enter to continue");
+            Console.ReadLine();
         }
 
         static TimeSpan AgeCalculator(DateTime birthDay)
