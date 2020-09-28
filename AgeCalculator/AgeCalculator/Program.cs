@@ -35,16 +35,50 @@ namespace AgeCalculator
                 Console.Clear();
                 int year = askX("year");
                 int month = askX("month");
-                int day = askX("day");
-
-                if (new DateTime(year, month, day) < DateTime.Now)
+                if (!(month < 1 || month > 12))
                 {
-                    return new DateTime(year, month, day);
+                    int day = askX("day");
+                    if (day <= 31)
+                    {
+                        bool dayOkay = false;
+                        switch (month)
+                        {
+                            case 4:
+                            case 6:
+                            case 9:
+                            case 11:
+                                if(day <= 30)
+                                {
+                                    dayOkay = true;
+                                }
+                                break;
+                            case 2:
+                                if(DateTime.IsLeapYear(year))
+                                {
+                                    if(day <= 29)
+                                    {
+                                        dayOkay = true;
+                                    }
+                                }
+                                else
+                                {
+                                    if(day <= 28)
+                                    {
+                                        dayOkay = true;
+                                    }
+                                }
+                                break;
+                            default:
+                                dayOkay = true;
+                                break;
+                        }
+                        if (new DateTime(year, month, day) < DateTime.Now && dayOkay)
+                        {
+                            return new DateTime(year, month, day);
+                        }
+                    }
                 }
-                else
-                {
-                    Console.WriteLine("\nPlease enter a valid date");
-                }
+                Console.WriteLine("\nPlease enter a valid date");
             }
         }
 
