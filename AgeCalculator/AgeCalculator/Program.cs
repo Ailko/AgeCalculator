@@ -15,7 +15,7 @@ namespace AgeCalculator
                 "\nHiervoor zullen we uw leeftijd vragen (die enkel voor deze functie gebruikt wordt)");
         }
 
-        static DateTime EnterAge()
+        static DateTime EnterBirthDate()
         {
             int year = askX("year");
             int month = askX("month");
